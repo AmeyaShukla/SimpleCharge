@@ -1,0 +1,34 @@
+<ion-modal-view class="loginPage">
+  <ion-content id="grad">
+
+  <button style="color:#3D59AB;font-size: 2em" ng-click="toggleLeft()" class="button button-icon button-clear icon ion-navicon-round" menu-toggle="left"></button>
+  <div class="Title Center">
+    <!-- Simple<span style="color: #3f51b5">Charge</span> -->
+    <img src="img/company_logo.png">
+  </div>
+    <form ng-submit="doLogin()">
+  <div class="list list-inset trans">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label trans input-inset">User Name</span>
+    <input class="trans" type="text" ng-model="loginData.userId" placeholder="please enter user name" required="true">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Password</span>
+    <input required="true" type="password" ng-model="loginData.userPassword" placeholder="please enter the password">
+  </label>
+  </div>
+  
+  <div class="Center">
+  <button type="submit" class="button  button-calm">
+  <b>Login</b>
+  </button>
+  </div>
+    </form>
+  </ion-content>
+    <div class="bar bar-footer customHeader" style="font-size: 2em;">
+   <span class="title"><b><a href="tel:+919940041658">Call Us: +91 99400-41658</a></b></span>
+</div>
+
+</ion-modal-view>
+
+

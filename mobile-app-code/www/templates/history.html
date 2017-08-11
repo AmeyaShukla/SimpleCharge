@@ -1,0 +1,68 @@
+<ion-modal-view class="loginPage">
+  <ion-header-bar class="customHeader">
+  <button ng-click="toggleLeft()" style="color: white;font-size: 2em" class="button button-icon button-clear icon ion-navicon-round" menu-toggle="left"></button>
+  <h1 class="title"><b>Recharge History</b></h1>
+  </ion-header-bar>
+
+  <ion-content id="grad">
+  	<label class="item item-input">
+	  <span class="input-label rechargeHistoryItem"><b>Search:</b></span>
+	  <input type="text" ng-model="searchText" placeholder="Enter Text">
+	</label>
+  	<div class="list" >
+  		
+  		<div class="item rechargeHistoryItem">
+  			<div class="row">
+  				<div class="col col-40"><b>Number</b></div>
+  				<div class="col col-25"><b>Amount</b></div>
+  				<div class="col col-25"><b>Status</b></div>
+  				<div class="col col-10"><b>Refresh</b></div>
+  			</div>
+  		</div>
+  		<div class="item rechargeHistoryItem" ng-repeat="recharge in pending | filter:searchText " ng-if="1 == 1">
+	  		<div class="row" >
+	  			<div class="col col-40">
+	  			<b>{{recharge.phoneNumber}}</b>
+	  			
+	  			</div>
+	  			<div class="col col-25">
+	  				<b>{{recharge.amount | currency:'&#8377;&nbsp;'}}</b>
+	  			</div>
+	  			<div class="col col-25">
+	  				<span style="background:#C0C0C0;color: black;padding:2px;">
+	  					<b>Waiting..</b>
+	  				</span>
+	  			</div>
+	  			<div class="col col-10" ng-if="recharge.recharge_status === '2'">
+	  			</div>	
+	  		</div>
+  		</div>
+  		<div class="item rechargeHistoryItem" ng-repeat="recharge in rechargeHistory | filter:searchText " ng-if="1 == 1">
+	  		<div class="row" >
+	  			<div class="col col-40">
+	  			<b>{{recharge.phone_number}}</b>
+	  			
+	  			</div>
+	  			<div class="col col-25">
+	  				<b>{{recharge.recharge_amount | currency:'&#8377;&nbsp;'}}</b>
+	  			</div>
+	  			<div class="col col-25">
+	  				<span ng-if="recharge.recharge_status === '2'" style="background: orange;color: white;padding:2px;">
+	  					<b>pending</b>
+	  				</span>
+	  				<span ng-if="recharge.recharge_status === '1'" style="background: green;color: white;padding:2px;">
+	  				<b>Success</b>
+	  				</span>
+	  				<span ng-if="recharge.recharge_status === '3' || recharge.recharge_status === '5'" style="background: red;color: white;padding:2px;padding-left: 5px;padding-right: 5px;">
+	  				<b>Failed</b>
+	  				</span>
+	  			</div>
+	  			<div class="col col-10" ng-if="recharge.recharge_status === '2'">
+	  				<button class="rechargeHistoryItem button button-small button-icon icon ion-refresh" ng-click="getStatus(recharge['recharge_api_trnid'],'history')"></button>
+	  			</div>	
+	  		</div>
+  		</div>
+  		
+  	</div>
+  </ion-content>
+  </ion-modal-view>

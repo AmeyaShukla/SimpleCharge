@@ -1,0 +1,26 @@
+<ion-modal-view class="loginPage">
+  <ion-header-bar class="customHeader">
+  <button ng-click="toggleLeft()" style="color:white;font-size: 2em" class="button button-icon button-clear icon ion-navicon-round" menu-toggle="left"></button>
+    <h1 class="title"><b>Earnings</b></h1>
+  </ion-header-bar>
+
+
+  <ion-content>
+    <p  style="padding-top:5%;font-size: 3em;text-align: center;padding-bottom: 10%;">Your Earnings</p>
+     <div class="card customHeader" >
+  <div class="item item-text-wrap" style="color: white;">
+    Your Margin : &nbsp&nbsp <b>{{ margin | number:2 }}</b>
+  </div>
+</div>
+    <div class="card customHeader">
+  <div class="item item-text-wrap" style="color: white;">
+    Total Recharge Amount : &nbsp&nbsp <b>{{total_amount | number:2 }}</b>
+  </div>
+</div>
+<div class="card customHeader">
+  <div class="item item-text-wrap" style="color: white;">
+    Total Margins Earned: &nbsp&nbsp <b>{{myEarnings | number:2 }}</b>
+  </div>
+</div>
+  </ion-content>
+  </ion-modal-view>

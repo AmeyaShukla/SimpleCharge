@@ -1,0 +1,36 @@
+{
+  "message": "Success",
+  "res_operator_ref": "",
+  "res_txid": "1376800",
+  "_id": "58a4aa2f02b993601ed52369",
+  "cr": 0,
+  "dr": 10,
+  "recharge_type": "prepaid/mobile",
+  "recharge_circle": "14",
+  "recharge_operator": "2",
+  "recharge_number": "7354042112",
+  "description": "Recharge of number 7354042112 Amount 10",
+  "margin_plan": ".03",
+  "app_name": "ameya.shukla4@gmail.com",
+  "__v": 0,
+  "trtime": "2017-02-15T19:21:19.708Z",
+  "trstatus": "2",
+  "transaction_type": "Recharge"
+}
+
+
+Question for Api provider
+  what is customer_call_back_url
+  values and meaning for trstatus
+  callbackstatus
+  dth recharge
+  margin is not credited
+
+{
+  "_id": "58a8b28ebb7dd91b0df4f460",
+  "status": "2",
+  "message": "Success",
+  "operator_id": "",
+  "cr": 0.24,
+  "dr": 8
+}

@@ -1,0 +1,179 @@
+"api_name" : "saksham_r2",
+	"typeCode" : [
+		{
+			"name" : "Prepaid",
+			"code" : "prepaid/mobile"
+		},
+		{
+			"name" : "DTH",
+			"code" : "dth"
+		}
+	],
+	"circleCode" : [
+		{
+			"name" : "Andhra Pradesh",
+			"code" : "1"
+		},
+		{
+			"name" : "Assam",
+			"code" : "2"
+		},
+		{
+			"name" : "Bihar",
+			"code" : "3"
+		},
+		{
+			"name" : "Jharkhand",
+			"code" : "3"
+		},
+		{
+			"name" : "Chennai",
+			"code" : "4"
+		},
+		{
+			"name" : "Delhi/NCR",
+			"code" : "5"
+		},
+		{
+			"name" : "Gujarat",
+			"code" : "6"
+		},
+		{
+			"name" : "Haryana",
+			"code" : "7"
+		},
+		{
+			"name" : "Himachal Pradesh",
+			"code" : "8"
+		},
+		{
+			"name" : "Jammu & Kashmir",
+			"code" : "9"
+		},
+		{
+			"name" : "Karnataka",
+			"code" : "10"
+		},
+		{
+			"name" : "Kerala",
+			"code" : "11"
+		},
+		{
+			"name" : "Kolkata",
+			"code" : "12"
+		},
+		{
+			"name" : "Maharashtra/Goa",
+			"code" : "13"
+		},
+		{
+			"name" : "MadhyaPradesh",
+			"code" : "14"
+		},
+		{
+			"name" : "Chattishgarh",
+			"code" : "14"
+		},
+		{
+			"name" : "Mumbai",
+			"code" : "15"
+		},
+		{
+			"name" : "North East",
+			"code" : "16"
+		},
+		{
+			"name" : "Orrisa",
+			"code" : "17"
+		},
+		{
+			"name" : "Punjab",
+			"code" : "18"
+		},
+		{
+			"name" : "Rajasthan",
+			"code" : "19"
+		},
+		{
+			"name" : "TamilNadu",
+			"code" : "20"
+		},
+		{
+			"name" : "UP(EAST)",
+			"code" : "21"
+		},
+		{
+			"name" : "UP(WEST)",
+			"code" : "22"
+		},
+		{
+			"name" : "Uttrakhand",
+			"code" : "22"
+		},
+		{
+			"name" : "West Bengal",
+			"code" : "23"
+		}
+	],
+	"operatorCode" : [
+		{
+			"name" : "Airtel",
+			"code" : "1"
+		},
+		{
+			"name" : "Idea",
+			"code" : "2"
+		},
+		{
+			"name" : "Aircel",
+			"code" : "3"
+		},
+		{
+			"name" : "MTS",
+			"code" : "4"
+		},
+		{
+			"name" : "Reliance GSM",
+			"code" : "5"
+		},
+		{
+			"name" : "Tata Indicom",
+			"code" : "6"
+		},
+		{
+			"name" : "Tata Docomo Normal",
+			"code" : "7"
+		},
+		{
+			"name" : "Tata Docomo Spl",
+			"code" : "8"
+		},
+		{
+			"name" : "BSNL TopUp",
+			"code" : "9"
+		},
+		{
+			"name" : "BSNL Spl",
+			"code" : "10"
+		},
+		{
+			"name" : "Vodafone",
+			"code" : "11"
+		},
+		{
+			"name" : "Uninor",
+			"code" : "12"
+		},
+		{
+			"name" : "MTNL Topup",
+			"code" : "13"
+		},
+		{
+			"name" : "MTNL Spl",
+			"code" : "14"
+		},
+		{
+			"name" : "Reliance CDMA",
+			"code" : "15"
+		}
+	],

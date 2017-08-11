@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>SimpleCharge</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }/node_modules/bootstrap/dist
+    </script>-->
+    <link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+    <script src="js/service.js"></script>
+    <script src="js/circleService.js"></script>
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+  </head>
+
+  <body ng-app="starter">
+    <ion-side-menus enable-menu-with-back-views="true">
+
+   <ion-side-menu side = "left" enable-menu-with-back-views="true">
+   <!-- <ion-header-bar class="bar-stable"> -->
+    <!-- </ion-header-bar> -->
+      <ion-content >
+      <span class="item menuTitle" >Menu</span>
+      <ion-list ng-if="!loggedIn">
+        <ion-item menu-close href="#/login">
+          Login
+        </ion-item>
+        <ion-item menu-close href="#/features">
+          Features
+        </ion-item>
+        <ion-item menu-close href="#/companyinfo">
+          About Us
+        </ion-item>
+      </ion-list>
+      <ion-list ng-if="loggedIn">
+        <ion-item menu-close href="#/dashboard" class="menuItemAlign">
+          Dashboard &nbsp<i class="menuIcon icon ion-grid"></i>
+        </ion-item>
+        <ion-item menu-close href="#/todayRecharge" class="menuItemAlign">
+          Today's Recharges &nbsp <i class="menuIcon icon ion-ios-calendar-outline"></i>
+        </ion-item>
+        <ion-item menu-close href="#/history" class="menuItemAlign">
+          Recharge Histroy &nbsp <i class="menuIcon icon ion-ios-clock-outline"></i>
+        </ion-item>
+        <ion-item menu-close href="#/earnings" class="menuItemAlign" ng-if='userRole == "retailer" '>
+          Earnings &nbsp&nbsp <span style="font-size: 1.3em;color: #3D59AB;">&#8377</span>
+        </ion-item>
+        <!--<ion-item menu-close href="#/account" class="menuItemAlign">
+          Account Settings &nbsp <i class="menuIcon icon ion-ios-cog-outline"></i>
+        </ion-item>-->
+        <ion-item menu-close href ng-click="logout()" class="menuItemAlign"> 
+          Logout &nbsp <i class="menuIcon icon ion-log-out"></i>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+
+   </ion-side-menu>
+
+   <ion-side-menu-content>
+      <ion-nav-view>
+      </ion-nav-view>
+   </ion-side-menu-content>
+
+</ion-side-menus>
+
+
+  </body>
+</html>

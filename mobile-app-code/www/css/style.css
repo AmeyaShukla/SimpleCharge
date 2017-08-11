@@ -1,0 +1,167 @@
+body{
+	
+	font-family: 'Raleway', sans-serif;
+
+}
+.item{
+	background-color: transparent;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input[type="text"]{
+	background-color: transparent;
+}
+input[type="password"]{
+	background-color: transparent;
+}
+#grad {
+	/*background-image: url('img/background.jpg'); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+   /*background: #00c5ff;
+  background: -webkit-radial-gradient(#00c5ff, #A9F9FF);
+  background: -o-radial-gradient(#00c5ff, #A9F9FF); 
+  background: -moz-radial-gradient(#00c5ff, #A9F9FF); 
+  background: radial-gradient(#00c5ff, #A9F9FF);*/
+}
+.trans {
+	background-color: transparent;
+}
+.item-select select{
+	background-color: transparent;
+}
+.errorAlert{
+	opacity: 1;
+}
+
+.rechargeHistoryItem{
+	padding-top:0px;
+	padding-bottom: 0px;
+	font-size: 0.9em;
+
+}
+.responseMsg{
+	height: 40px;
+	visibility: hidden;
+}
+.popup-head {
+	padding: 0px;
+}
+.popup-body{
+	padding: 0px;
+}
+.successResponse{
+
+	margin-right: 2px;
+	margin-left: 2px;
+	border:2px solid #33691e;
+	background-color:#8bc34a;
+	color: white;
+	height: 40px;
+	display:block;
+}
+.errorResponse{
+
+	margin-right: 2px;
+	margin-left: 2px;
+	border:2px solid red;
+	background-color:#ef5350;
+	color: white;
+	height: 40px;
+	display:block;
+}
+.pendingResponse{
+
+	margin-right: 2px;
+	margin-left: 2px;
+	border:2px solid #ff6f00;
+	background-color: #ffd54f;
+	height: 40px;
+	display:block;
+}
+.Title{
+	margin: 0px;
+	padding-top:0%;
+	padding-bottom: 0%;
+	font-family: 'Raleway', sans-serif;
+}
+.TitleDashboard{
+	margin:0px;
+	padding-top:10%;
+	font-family: 'Raleway', sans-serif;
+}
+.Center{
+	text-align: center;
+}
+.title{
+	font-family: 'Raleway', sans-serif;
+	color: white;
+}
+.errorMsg{
+	padding:5px;
+	color: red;
+	
+}
+.balanceClass{
+	text-align: right;
+	padding-right:10px;
+	font-weight: bold;
+
+}
+/*.bar-header{
+	background-image: url('img/background.jpg');
+	background-size: cover;
+}*/
+
+.customHeader{
+	background-color:#3D59AB;
+}
+.menuTitle{
+	background-color: #3D59AB;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	font-size: 1.3em;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 100%;
+}
+.menuIcon{
+	font-size: 1.5em;
+	color: #1565C0;
+}
+.notificationIcon{
+	position: absolute;
+	top: 5px;
+	font-weight: bold;
+	right: 10px;
+}
+.menuItemAlign{
+	text-align: right;
+}
+.confirmHeading{
+	background-color: #1565C0;
+	color: white;
+	height: 44px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.2em;
+	vertical-align:middle;
+}
+.confirmHeading p{
+	padding: 10px;
+}
+.rechargeFormData{
+	padding:5px;
+	color: #1565C0;
+	display: block;
+	left:30%;
+}
+.accountTabs{
+	padding-top: 44px;
+}

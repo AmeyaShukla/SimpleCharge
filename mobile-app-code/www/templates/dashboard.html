@@ -1,0 +1,89 @@
+<ion-modal-view class="loginPage">
+  <ion-header-bar class="customHeader">
+  <button ng-click="toggleLeft()" style="color:white;font-size: 2em" class="button button-icon button-clear icon ion-navicon-round" menu-toggle="left"></button>
+  <h1 class="title"><b>Dashboard</b></h1>
+  </ion-header-bar>
+  <div class="bar bar-subheader Center responseMsg" id="responseMsg">
+   <p><b>Recharge of Rs. &nbsp{{responseData.rechargeData.amount}} on {{responseData.rechargeData.phoneNumber}} is {{responseData.msg}}</b></p>
+    </div>
+  <ion-content id="grad">
+<!--   <div class="notificationIcon">
+  <button style="background-color: red;color: #1565C0;font-size:5px" class=" button button-icon button-clear icon ion-android-notifications-none" ng-click="showNotifications()">
+  </button></div> -->
+  
+ <!--  <div class="responseMsg">
+    <p></p>
+  </div> -->
+  <div class="TitleDashboard Center">
+    <!-- Simple<span style="color: #3f51b5">Charge</span> -->
+    <img src="img/company_logo_12.png">
+  </div>
+  <div class="balanceClass">
+    <span>Balance: </span> {{user_balance | number : 2}}
+  </div>
+  <form ng-submit="check10MinRule();" name="rechargeFormName" novalidate>
+   <div class="list list-inset trans">
+   <div class="item Center" style="color:#5959AB"><b>New Recharge</b></div>
+  <label class="item item-input trans">
+    <span class="input-label input Center">Phone Number</span>
+    <input type="number" class="Center" name="phoneNo" ng-keyup="getCodeInfo($event)" ng-model="rechargeForm.phoneNumber"  ng-pattern="/^[0-9]{10,10}$/" placeholder="phone number" required="true">
+  </label>
+  <!-- <span ng-if="rechargeFormName.phoneNo.$dirty && rechargeFormName.phoneNo.$invalid" class="errorMsg">*Mobile Number is not valid</span> -->
+  <label class = "item item-input item-select trans">
+   <div class = "input-label Center">
+      Operator
+   </div>
+	
+   <select class="Center" ng-init="rechargeForm.operator = rechargeForm.operator || operators[0].code" ng-model="rechargeForm.operator" ng-options="operator.code as operator.name for operator in operators">
+   	  <!-- <option selected>Select Operator</option>
+      <option ng-repeat="operator in operators" value="operator.code">{{operator.opt}}</option> -->
+   </select>
+</label>
+<label class = "item item-input item-select trans">
+   <div class = "input-label Center">
+      Circle
+   </div>
+  
+   <select class="Center" ng-init="rechargeForm.circle = rechargeForm.circle || circles[0].code" ng-model="rechargeForm.circle" ng-options="circle.code as circle.name for circle in circles">
+      <!-- <option selected>Select Operator</option>
+      <option ng-repeat="operator in operators" value="operator.code">{{operator.opt}}</option> -->
+   </select>
+</label>
+  <label class = "item item-input item-select trans">
+   <div class = "input-label trans Center">
+      Type
+   </div>
+	
+   <select class="Center" ng-model="rechargeForm.type" ng-init="rechargeForm.type = rechargeForm.type || rechargeType[0].code" ng-options="type.code as type.name for type in rechargeType">
+   </select>
+</label>
+<label class="item item-input trans">
+    <span class="input-label input Center">Recharge Amount</span>
+    <input type="number" min=0 max=99999 class="Center" ng-pattern="/^[0-9]{1,10}$/" name="amt" ng-model="rechargeForm.amount" placeholder="Amount" required="true">
+  </label>
+  <!--<span ng-if="rechargeFormName.amt.$dirty && rechargeFormName.amt.$invalid" class="errorMsg">*Amount is not valid</span>-->
+<!-- <label class = "item item-input item-select">
+   <div class = "input-label">
+      Circle
+   </div>
+	
+   <select class="Center">
+      <option>Airtel</option>
+      <option>Idea</option>
+      <option>Aircel</option>
+   </select>
+</label> -->
+  
+  </div>
+  <div class="Center">
+  	<button type="submit" class="button  button-calm"  ng-disabled="rechargeFormName.$invalid">
+  <b>Proceed</b>
+  </button>
+  </div>
+   </form>
+   <br>
+   <div class="list-inset">
+   </div>
+  </ion-content>
+
+</ion-modal-view>
